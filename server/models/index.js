@@ -1,8 +1,16 @@
-var db = require('../db');
+var db = require('../db').dbConnection;
 
 module.exports = {
   messages: {
-    get: function () {}, // a function which produces all the messages
+    get: ((err, rows) => {
+
+      // db.query('SELECT * FROM messages');
+      // if (err) {
+      //   callback(err);
+      // } else {
+      //   callback(null, rows);
+      // }
+    }), // a function which produces all the messages
     post: function () {} // a function which can be used to insert a message into the database
   },
 
